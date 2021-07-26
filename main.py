@@ -77,11 +77,11 @@ def make_coffee(drink):
 # TODO: 1. Print report of all coffee machine resources
 coffee = "☕"
 
-on = True
-while on:
+machine_on = True
+while machine_on:
 	choice = input("What would you like? (espresso/latte/cappucino): ")
 	if choice.upper() == "OFF":
-		on = False
+		machine_on = False
 	elif choice.upper() == "REPORT":
 		print(f"Water: {resources['water']}ml")
 		print(f"Milk: {resources['milk']}ml")
@@ -93,4 +93,4 @@ while on:
 			payment= insert_coins()
 			if payment_successful(payment,drink["cost"]):
 				make_coffee(drink)
-				print(f"enjoy your {choice} {coffee}")
+				print(f"Enjoy your {choice} {coffee}!!!")
